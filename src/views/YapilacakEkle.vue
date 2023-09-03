@@ -30,7 +30,6 @@ export default {
       }).then(() => {
         this.$router.push("/");
       });
-      console.log(this.baslik, this.icerik);
     },
   },
 };
