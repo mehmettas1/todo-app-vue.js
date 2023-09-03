@@ -5,7 +5,7 @@
       <div class="icon">
         <span class="material-icons"> edit </span>
         <span @click="yapilacakSil" class="material-icons"> delete </span>
-        <span @click="toggle" class="material-icons"> done </span>
+        <span @click="toggle" class="material-icons" tick> done </span>
       </div>
     </div>
     <div v-if="detayGoster" class="detay">
@@ -34,9 +34,9 @@ export default {
       fetch(this.uri, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ yapıldı: !this.yapilacak.yapıldı }),
+        body: JSON.stringify({ yapildi: !this.yapilacak.yapildi }),
       })
-        .then(() => this.$emit("yapıldı", this.yapilacak.id))
+        .then(() => this.$emit("yapildi", this.yapilacak.id))
         .catch((err) => console.log(err));
     },
   },
@@ -71,5 +71,12 @@ h3 {
 }
 .material-icons:hover {
   color: #2f3542;
+}
+
+.yapilacak.yapildi {
+  border: 3px solid #218c74;
+}
+.yapilacak.yapildi .tick {
+  color: #218c74;
 }
 </style>
