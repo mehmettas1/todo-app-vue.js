@@ -1,5 +1,5 @@
 <template>
-  <div class="yapilacak">
+  <div class="yapilacak" :class="{ yapildi: yapilacak.yapildi }">
     <div class="baslik">
       <h3 @click="detayGoster = !detayGoster">{{ yapilacak.baslık }}</h3>
       <div class="icon">
