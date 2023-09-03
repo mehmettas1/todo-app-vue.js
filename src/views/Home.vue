@@ -1,25 +1,32 @@
 <template>
-  <div class="home">TODO APP</div>
+  <div class="home">
+    <div v-if="yapilacaklar.length">
+      <div v-for="yap in yapilacaklar" :key="yap.id">
+        <Yapilacak :yapilacak="yap" />
+      </div>
+    </div>
+    <div v-else>
+      <p>yapilacaklar yükleniyor</p>
+    </div>
+  </div>
 </template>
 
 <script>
-
-
 // @ is an alias to /src
-
+import Yapilacak from "../components/Yapilacak";
 export default {
   name: "Home",
+  components: { Yapilacak },
   data() {
     return {
-      yapilacaklar:[]
-    }
+      yapilacaklar: [],
+    };
   },
-  mounted(){
-fetch('http://localhost:3000/yapilacaklar')
-.then((res)=>res.json())
-.then((data)=>this.yapilacaklar=data)
-.catch(())
-  }
-  ,
+  mounted() {
+    fetch("http://localhost:3000/yapilacaklar")
+      .then((res) => res.json())
+      .then((data) => (this.yapilacaklar = data))
+      .catch((err) => console.log(err));
+  },
 };
 </script>
