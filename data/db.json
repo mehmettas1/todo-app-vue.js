@@ -1,0 +1,22 @@
+{
+  "yapilacaklar": [
+    {
+      "id": 1,
+      "baslık": "kitap",
+      "icerik": "DEDE korkut kitabından 40 sayfa oku",
+      "yapıldı": true
+    },
+    {
+      "id": 2,
+      "baslık": "yemek",
+      "icerik": "patlıcan musakka yap",
+      "yapıldı": false
+    },
+    {
+      "id": 3,
+      "baslık": "aloşveriş",
+      "icerik": "pantolon almayı unutma",
+      "yapıldı": false
+    }
+  ]
+}
