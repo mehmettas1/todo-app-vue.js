@@ -4,8 +4,8 @@
       <h3 @click="detayGoster = !detayGoster">{{ yapilacak.baslık }}</h3>
       <div class="icon">
         <span class="material-icons"> edit </span>
-        <span class="material-icons"> delete </span>
-        <span class="material-icons"> done </span>
+        <span @click="yapilacakSil" class="material-icons"> delete </span>
+        <span @click="toggle" class="material-icons"> done </span>
       </div>
     </div>
     <div v-if="detayGoster" class="detay">
@@ -21,7 +21,24 @@ export default {
   data() {
     return {
       detayGoster: false,
+      uri: "http://localhost:3000/yapilacaklar/" + this.yapilacak.id,
     };
+  },
+  methods: {
+    yapilacakSil() {
+      fetch(this.uri, { method: "DELETE" })
+        .then(() => this.$emit("sil", this.yapilacak.id))
+        .catch((err) => console.log(err));
+    },
+    toggle() {
+      fetch(this.uri, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ yapıldı: !this.yapilacak.yapıldı }),
+      })
+        .then(() => this.$emit("yapıldı", this.yapilacak.id))
+        .catch((err) => console.log(err));
+    },
   },
 };
 </script>
