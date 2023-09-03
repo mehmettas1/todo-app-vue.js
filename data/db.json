@@ -4,13 +4,13 @@
       "id": 1,
       "baslık": "kitap",
       "icerik": "DEDE korkut kitabından 40 sayfa oku",
-      "yapildi": false
+      "yapildi": true
     },
     {
       "id": 2,
       "baslık": "yemek",
       "icerik": "patlıcan musakka yap",
-      "yapildi": false
+      "yapildi": true
     },
     {
       "id": 3,
