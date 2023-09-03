@@ -1,9 +1,14 @@
 <template>
   <div class="yapilacak">
     <div class="baslik">
-      <h3>{{ yapilacak.baslık }}</h3>
+      <h3 @click="detayGoster = !detayGoster">{{ yapilacak.baslık }}</h3>
+      <div class="icon">
+        <span class="material-icons"> edit </span>
+        <span class="material-icons"> delete </span>
+        <span class="material-icons"> done </span>
+      </div>
     </div>
-    <div class="detay">
+    <div v-if="detayGoster" class="detay">
       <p>{{ yapilacak.icerik }}</p>
     </div>
   </div>
@@ -12,6 +17,12 @@
 <script>
 export default {
   props: ["yapilacak"],
+
+  data() {
+    return {
+      detayGoster: false,
+    };
+  },
 };
 </script>
 <style>
@@ -29,5 +40,19 @@ export default {
 }
 h3 {
   cursor: pointer;
+}
+.baslik {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+.material-icons {
+  font-size: 25px;
+  margin-left: 10px;
+  color: #bbb;
+  cursor: pointer;
+}
+.material-icons:hover {
+  color: #2f3542;
 }
 </style>
