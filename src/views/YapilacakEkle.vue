@@ -16,6 +16,9 @@ export default {
     };
   },
   methods: {
+    // yapilacakEkle() {
+    //   console.log(this.baslik, this.icerik);
+    // },
     yapilacakEkle() {
       let yapilacak = {
         baslik: this.baslik,
@@ -50,8 +53,14 @@ label {
   width: 100%;
   box-sizing: border-box;
 }
-
 input {
+  padding: 10px;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  box-sizing: border-box;
+}
+textarea {
   border: 1px solid #ddd;
   padding: 10px;
   width: 100%;
@@ -68,5 +77,6 @@ form button {
   border: 0;
   border-radius: 6px;
   font-size: 16px;
+  cursor: pointer;
 }
 </style>
