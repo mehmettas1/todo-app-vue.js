@@ -1,10 +1,12 @@
 <template>
   <nav class="main-nav">
-    <router-link :to="{ name: 'Home' }">Yapılacaklar</router-link>
+    <router-link :to="{ name: 'home' }">Yapılacaklar</router-link>
     <router-link :to="{ name: 'YapilacakEkle' }">Yapilacak Ekle</router-link>
   </nav>
 </template>
-<script></script>
+<script>
+export default {};
+</script>
 <style>
 .main-nav {
   text-align: center;
