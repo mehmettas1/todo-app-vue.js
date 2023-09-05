@@ -8,5 +8,12 @@
   </form>
 </template>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      baslık: "",
+      icerik: "",
+    };
+  },
+};
 </script>
