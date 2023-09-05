@@ -1,16 +1,28 @@
 <template>
   <nav class="filter-nav">
-    <button @click="filterGuncelle('hepsi')">Bütün Yapılacaklar</button>
-    <button @click="filterGuncelle('Tamamlandı')">
+    <button
+      @click="filterGuncelle('hepsi')"
+      :class="{ active: aktifSekme === 'hepsi' }"
+    >
+      Bütün Yapılacaklar
+    </button>
+    <button
+      @click="filterGuncelle('tamamlandı')"
+      :class="{ active: aktifSekme === 'tamamlandı' }"
+    >
       Tamamlanan Yaapılacaklar
     </button>
-    <button @click="filterGuncelle('yapilıyor')">
+    <button
+      @click="filterGuncelle('yapiliyor')"
+      :class="{ active: aktifSekme === 'yapiliyor' }"
+    >
       Devam eden Yapılacaklar
     </button>
   </nav>
 </template>
 <script>
 export default {
+  props: ["aktifSekme"],
   methods: {
     filterGuncelle() {
       this.$emit("filterDurum", durum);
@@ -32,6 +44,6 @@ export default {
   cursor: pointer;
 }
 .filter-nav button.active {
-  color: #555;
+  color: #b33939;
 }
 </style>
