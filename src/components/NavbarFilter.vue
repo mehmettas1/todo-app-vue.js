@@ -24,7 +24,7 @@
 export default {
   props: ["aktifSekme"],
   methods: {
-    filterGuncelle() {
+    filterGuncelle(durum) {
       this.$emit("filterDurum", durum);
     },
   },

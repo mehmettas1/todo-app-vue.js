@@ -10,11 +10,11 @@
       "id": 2,
       "baslık": "yemek",
       "icerik": "patlıcan musakka yap",
-      "yapildi": true
+      "yapildi": false
     },
     {
       "id": 3,
-      "baslık": "aloşveriş",
+      "baslık": "alışveriş",
       "icerik": "pantolon almayı unutma",
       "yapildi": true
     },
@@ -23,6 +23,12 @@
       "icerik": "asdasdasd",
       "yapildi": true,
       "id": 57580158
+    },
+    {
+      "baslık": "123",
+      "icerik": "123",
+      "yapildi": false,
+      "id": 292145
     }
   ]
 }
