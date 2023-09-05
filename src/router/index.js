@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import YapilacakEkle from "../views/YapilacakEkle.vue";
+import YapilacakGuncelle from "../views/YapilacakGuncelle.vue";
 
 const routes = [
   {
@@ -12,6 +13,11 @@ const routes = [
     path: "/yapilacak-ekle",
     name: "YapilacakEkle",
     component: YapilacakEkle,
+  },
+  {
+    path: "/yapilacak-guncelle/:id",
+    name: "YapilacakGuncelle",
+    component: YapilacakGuncelle,
   },
   {
     path: "/about",
