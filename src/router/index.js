@@ -18,6 +18,7 @@ const routes = [
     path: "/yapilacak-guncelle/:id",
     name: "YapilacakGuncelle",
     component: YapilacakGuncelle,
+    props: true,
   },
   {
     path: "/about",
