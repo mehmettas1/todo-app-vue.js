@@ -1,6 +1,6 @@
 <template>
   <nav class="filter-nav">
-    <button @click="filterGuncelle('hepsi')">Bütün Yaapılacaklar</button>
+    <button @click="filterGuncelle('hepsi')">Bütün Yapılacaklar</button>
     <button @click="filterGuncelle('Tamamlandı')">
       Tamamlanan Yaapılacaklar
     </button>
