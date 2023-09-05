@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <NavbarFilter @filterDurum="aktifSekme = $event" />
+    <NavbarFilter @filterDurum="aktifSekme = $event" :aktifSekme="aktifSekme" />
     <div v-if="yapilacaklar.length">
       <div v-for="yap in yapilacaklar" :key="yap.id">
         <Yapilacak :yapilacak="yap" @sil="silHandle" @yapildi="yapildiHandle" />
