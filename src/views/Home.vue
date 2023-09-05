@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <NavbarFilter @filterDurum="aktifSekme = $event" />
     <div v-if="yapilacaklar.length">
       <div v-for="yap in yapilacaklar" :key="yap.id">
         <Yapilacak :yapilacak="yap" @sil="silHandle" @yapildi="yapildiHandle" />
@@ -13,13 +14,15 @@
 
 <script>
 // @ is an alias to /src
+import NavbarFilter from "@/components/NavbarFilter.vue";
 import Yapilacak from "../components/Yapilacak";
 export default {
   name: "Home",
-  components: { Yapilacak },
+  components: { Yapilacak, NavbarFilter },
   data() {
     return {
       yapilacaklar: [],
+      aktifSekme: "hepsi",
     };
   },
   mounted() {
